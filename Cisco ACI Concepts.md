@@ -6,11 +6,9 @@ Purpose: Provides high-performance, scalable, automated connectivity.
 
 Components:
 
-Leaf switches: Connect to endpoints (servers, routers, firewalls)
-
-Spine switches: Connect only to leafs (no spine-to-spine or leaf-to-leaf)
-
-APICs: Centralized management & policy control
+* Leaf switches: Connect to endpoints (servers, routers, firewalls)
+* Spine switches: Connect only to leafs (no spine-to-spine or leaf-to-leaf)
+* APICs: Centralized management & policy control
 
 🧠 2. APIC (Application Policy Infrastructure Controller)
 
@@ -20,11 +18,9 @@ Cluster: Usually 3 or more nodes for HA.
 
 Functions:
 
-Policy management
-
-Fabric discovery
-
-Health monitoring
+* Policy management
+* Fabric discovery
+* Health monitoring
 
 Integration with orchestration tools (vCenter, OpenStack, Kubernetes)
 
@@ -40,26 +36,12 @@ Definition: One independent ACI fabric (spine + leaf + APICs).
 
 Purpose: Scalability, resiliency, multi-location deployments.
 
-Multi-POD
+## Multi-POD ##
 
 Definition: Multiple PODs under one APIC cluster connected via IPN (Inter-POD Network).
 
 Benefits: Centralized management, fault isolation, disaster recovery.
-
-Diagram:
-
-          ┌───────────────┐
-          │  APIC Cluster │
-          └──────┬────────┘
-                 │
-   ┌─────────────┴─────────────┐
-   │                           │
-┌───────┐                 ┌───────┐
-│ POD 1 │                 │ POD 2 │
-│(Spine,│                 │(Spine,│
-│ Leaf) │                 │ Leaf) │
-└───────┘   <----IPN----> └───────┘
-
+     
 🧱 5. Bridge Domain (BD)
 
 Definition: Layer 2 forwarding domain, like a VLAN.
@@ -68,11 +50,9 @@ Purpose: Connects EPGs; endpoints in same BD communicate at L2.
 
 L3 Capability:
 
-Associate BD with VRF
-
-Configure Subnet/Gateway
-
-Now BD can route traffic (acts like an SVI)
+* Associate BD with VRF
+* Configure Subnet/Gateway
+* Now BD can route traffic (acts like an SVI)
 
 BD Modes Comparison:
 
