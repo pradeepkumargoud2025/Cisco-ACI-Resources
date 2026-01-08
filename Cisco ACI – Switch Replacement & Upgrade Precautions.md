@@ -16,7 +16,7 @@ This document describes the precautions and best practices to be followed during
 * Ensure all APIC nodes are UP & fully fit
 * No APIC should be in failed or disconnected state
 
-acidiag avread
+# acidiag avread
 
 ✅ Fabric Health Check
 
@@ -24,8 +24,9 @@ acidiag avread
 * Check for existing critical or major faults
 * Clear old faults before MW if possible
 
-show fabric membership
-show system internal fault info
+# show fabric membership
+
+# show system internal fault info
 
 ✅ Identify Faulty Switch
 
